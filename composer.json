@@ -1,0 +1,12 @@
+{
+    "name": "kuajing100/laravel-notification-wecom",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "jabber",
+            "email": "2898117012@qq.com"
+        }
+    ],
+    "require": {}
+}
