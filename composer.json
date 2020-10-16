@@ -9,6 +9,7 @@
     "description": "WeCom notification channel for Laravel.",
     "type": "library",
     "license": "MIT",
+    "minimum-stability": "dev",
     "homepage": "https://www.kuajing100.com",
     "authors": [
         {
