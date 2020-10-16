@@ -1,12 +1,64 @@
 {
     "name": "kuajing100/laravel-notification-wecom",
+    "keywords": [
+        "WeCom",
+        "Laravel",
+        "Notification",
+        "Channel"
+    ],
+    "description": "WeCom notification channel for Laravel.",
     "type": "library",
     "license": "MIT",
+    "homepage": "https://www.kuajing100.com",
     "authors": [
         {
             "name": "jabber",
-            "email": "2898117012@qq.com"
+            "email": "2898117012@qq.com",
+            "homepage": "https://www.kuajing100.com",
+            "role": "Developer"
         }
     ],
-    "require": {}
+    "support": {
+        "wiki": "https://github.com/kuajing100/laravel-notification-wecom/wiki",
+        "issues": "https://github.com/kuajing100/laravel-notification-wecom/issues"
+    },
+    "require": {
+        "php": "^7.3",
+        "illuminate/notifications": "^8.10",
+        "illuminate/queue": "^8.10",
+        "overtrue/laravel-wechat": "^6.0"
+    },
+    "require-dev": {
+        "captainhook/captainhook": "^5.4",
+        "captainhook/plugin-composer": "^5.2",
+        "friendsofphp/php-cs-fixer": "^2.16",
+        "mockery/mockery": "^1.4",
+        "phpunit/phpunit": "^9.4",
+        "ramsey/conventional-commits": "^1.0",
+        "ext-http": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Kuajing100\\WeCom\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": "vendor/bin/captainhook install -f -s",
+        "check-style": "php-cs-fixer fix --using-cache=no --diff --config=.php_cs --dry-run --ansi",
+        "fix-style": "php-cs-fixer fix --using-cache=no --config=.php_cs --ansi",
+        "test": "vendor/bin/phpunit --colors=always"
+    },
+    "scripts-descriptions": {
+        "test": "Run all tests.",
+        "check-style": "Run style checks (only dry run - no fixing!).",
+        "fix-style": "Run style checks and fix violations."
+    },
+    "config": {
+        "sort-packages": true
+    }
 }
